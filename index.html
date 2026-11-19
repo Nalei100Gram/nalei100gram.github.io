@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1430">
+  <meta name="description" content="Nalei100Gram — неофіційний клієнт Telegram із власним інтерфейсом та мультимедійними можливостями. День і ніч — обери свою тему.">
+  <title>Nalei100Gram — спілкування без зайвого</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("nalei-theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.dataset.theme = saved || (prefersLight ? "light" : "dark");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="orb"></div>
+    <div class="cloud cloud-a"><span></span><span></span><span></span></div>
+    <div class="cloud cloud-b"><span></span><span></span><span></span></div>
+    <div class="cloud cloud-c"><span></span><span></span><span></span></div>
+    <div class="cloud cloud-d"><span></span><span></span><span></span></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Nalei100Gram — на головну">
+      <img class="brand-icon" src="assets/favicon.svg" alt="" width="38" height="38">
+      <span>Nalei100Gram</span>
+    </a>
+    <nav id="nav" class="nav">
+      <a href="#features">Можливості</a>
+      <a href="#about">Про проєкт</a>
+      <a href="https://github.com/THELAPISUA/nalei100gram" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+    <div class="top-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Перемкнути тему" aria-pressed="false" title="День / ніч">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.4"/><g><path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6M4.8 4.8l1.9 1.9M17.3 17.3l1.9 1.9M19.2 4.8l-1.9 1.9M6.7 17.3l-1.9 1.9"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.6A8.6 8.6 0 0 1 9.4 3.6a8.6 8.6 0 1 0 11 11Z"/></svg>
+      </button>
+      <a class="button button-small button-outline top-download" href="https://github.com/THELAPISUA/nalei100gram/releases/latest">Завантажити <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> НЕЗАЛЕЖНИЙ ПРОЄКТ · OPEN SOURCE</div>
+        <h1>Твій Telegram.<br><span>Твій простір.</span></h1>
+        <p class="hero-lead">Nalei100Gram — альтернативний клієнт для спілкування, створений із увагою до деталей, зручності та свободи налаштувань.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/THELAPISUA/nalei100gram/releases/latest">Спробувати Nalei100Gram <span>↗</span></a>
+          <a class="button button-ghost" href="https://github.com/THELAPISUA/nalei100gram">Переглянути код <span>⌘</span></a>
+        </div>
+        <p class="hero-note">Проєкт розвивається. Деякі функції та деталі можуть змінюватися.</p>
+      </div>
+      <div class="preview-wrap" aria-label="Декоративний макет інтерфейсу">
+        <div class="preview-glow"></div>
+        <div class="app-window">
+          <div class="window-bar"><div class="window-dots"><b></b><b></b><b></b></div><span>nalei100gram</span><span class="window-status">● online</span></div>
+          <div class="app-layout">
+            <aside class="mock-sidebar">
+              <div class="mock-logo">N<span>100</span></div>
+              <div class="mock-search">⌕ &nbsp; Пошук</div>
+              <div class="chat active"><div class="avatar violet">М</div><div><b>Майстерня</b><small>До речі, є новини!</small></div><time>12:41</time></div>
+              <div class="chat"><div class="avatar blue">К</div><div><b>Команда</b><small>Файл надіслано</small></div><time>11:08</time></div>
+              <div class="chat"><div class="avatar orange">А</div><div><b>Архів думок</b><small>Ти: цікава ідея</small></div><time>Вчора</time></div>
+              <div class="chat"><div class="avatar green">Р</div><div><b>Розробка</b><small>Зміни вже в main</small></div><time>Пн</time></div>
+            </aside>
+            <section class="mock-conversation">
+              <div class="mock-chat-head"><div class="avatar violet">М</div><div><b>Майстерня</b><small>3 учасники</small></div><span>⌕　⋮</span></div>
+              <div class="day-label">СЬОГОДНІ</div>
+              <div class="bubble incoming">Привіт! Як просувається проєкт?<small>12:39</small></div>
+              <div class="bubble outgoing">Поступово додаю нові можливості ✨<small>12:40</small></div>
+              <div class="bubble incoming">Вже цікаво подивитися!<small>12:41</small></div>
+              <div class="mock-composer"><span>＋</span><span>Написати повідомлення…</span><span>☺</span><span class="send">➤</span></div>
+            </section>
+          </div>
+        </div>
+        <div class="float-tag tag-top"><span>✦</span> Продуманий інтерфейс</div>
+        <div class="float-tag tag-bottom"><span>☁</span> День і ніч</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Технології та можливості">
+      <span>СПІЛКУВАННЯ</span><b>✳</b><span>МУЛЬТИМЕДІА</span><b>✳</b><span>НАЛАШТУВАННЯ</span><b>✳</b><span>OPEN SOURCE</span>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="section-heading">
+        <div><div class="eyebrow">МОЖЛИВОСТІ</div><h2>Більше, ніж просто чат.</h2></div>
+        <p>Інструменти для щоденного спілкування — в одному місці. Проєкт активно розвивається.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large"><div class="feature-icon">◈</div><div class="feature-number">01 / МЕДІА</div><h3>Увесь контент поруч</h3><p>Повідомлення, фотографії, файли, аудіо та голосові — зручна робота з різними типами вкладень.</p><div class="media-art"><div class="media-tile tile-a">▧</div><div class="media-tile tile-b">♫</div><div class="media-tile tile-c">▶</div><div class="media-line"></div></div></article>
+        <article class="feature-card"><div class="feature-icon">♫</div><div class="feature-number">02 / АУДІО</div><h3>Слухай і надсилай</h3><p>Підтримка аудіо та голосових повідомлень.</p><div class="soundwave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="feature-card"><div class="feature-icon">⌘</div><div class="feature-number">03 / РОЗВИТОК</div><h3>Відкритий код</h3><p>Можна дослідити реалізацію, повідомити про помилку або долучитися до розвитку.</p><a class="text-link" href="https://github.com/THELAPISUA/nalei100gram">Репозиторій GitHub ↗</a></article>
+        <article class="feature-card"><div class="feature-icon theme-icon-swap"><span class="sun-mark">☀</span><span class="moon-mark">☾</span></div><div class="feature-number">04 / ПЕРСОНАЛІЗАЦІЯ</div><h3>День і ніч</h3><p>Світла тема — ясний день, темна — зоряна ніч. Перемикай одним дотиком.</p><div class="swatches"><i></i><i></i><i></i><i></i><i></i></div></article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner">
+        <div class="about-symbol"><img src="assets/favicon.svg" alt="Іконка Nalei100Gram" width="160" height="160"></div>
+        <div><div class="eyebrow">НЕЗАЛЕЖНА РОЗРОБКА</div><h2>Створюється з цікавості.<br><span>Розвивається завдяки ідеям.</span></h2><p>Nalei100Gram — незалежний програмний проєкт. Його мета — досліджувати можливості створення зручного клієнта для спілкування та поступово розширювати його функціональність.</p><a class="button button-primary" href="https://github.com/THELAPISUA/nalei100gram">Стежити за розробкою ↗</a></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="eyebrow">ПОЧНИ ЗАРАЗ</div><h2>Спробуй. Досліди.<br><span>Долучайся.</span></h2>
+      <p>Переглянь вихідний код, завантаж останню версію або залиш відгук.</p>
+      <div class="hero-actions"><a class="button button-primary" href="https://github.com/THELAPISUA/nalei100gram/releases/latest">Завантажити реліз ↗</a><a class="button button-ghost" href="https://github.com/THELAPISUA/nalei100gram/issues">Повідомити про проблему ↗</a></div>
+      <small>Неофіційний клієнт. Telegram є торговельною маркою відповідних правовласників. Nalei100Gram не є продуктом Telegram.</small>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><img class="brand-icon" src="assets/favicon.svg" alt="" width="27" height="27"><span>Nalei100Gram</span></a><span>Зроблено з увагою до деталей.</span><a href="https://github.com/THELAPISUA/nalei100gram">GitHub ↗</a><span>© <span id="year"></span> Nalei100Gram</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
